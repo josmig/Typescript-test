@@ -17,7 +17,10 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /*acceso para los decoradores propios*/
+    "experimentalDecorators": true
   },
   "include": ["src"]
 }
