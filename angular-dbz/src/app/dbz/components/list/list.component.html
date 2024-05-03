@@ -7,18 +7,21 @@
               let isEven=even;
               let isOdd=odd;
               "
-      class="list-group-item"
+      class="list-group-item d-flex justify-content-between align-items-center"
       [ngClass]="{
         'list-group-item-dark' :isLast,
         'list-group-item-primary': isEven
         }"
       >
-
-    <span class="text-primary ">{{i+1}} - </span>
-
-    <span>{{personaje.name}}</span>
-    -
-    <strong>Power : {{personaje.power}}</strong>
+    <div>
+        <span class="text-primary ">{{i+1}} - </span>
+        <span>{{personaje.name}}</span>
+        -
+        <strong>Power : {{personaje.power}}</strong>
+    </div>
+    <button
+      (click)="eliminarPersona(i)"
+      class="btn btn-danger">X</button>
 
   </li>
 </ul>
