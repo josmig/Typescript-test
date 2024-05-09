@@ -23,8 +23,11 @@ export class DbzService {
   }
 
   //minuto 9:30
-  eliminarPersonaje(index: number) :void{
-    this.characters.splice(index,1);
-  }
+  // eliminarPersonaje(index: number) :void{
+  //   this.characters.splice(index,1);
+  // }
 
+  eliminarPersonajeId(id:string){
+    this.characters = this.characters.filter(character => character.id !== id )
+  }
 }

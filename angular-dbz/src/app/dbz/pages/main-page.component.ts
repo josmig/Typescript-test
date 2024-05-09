@@ -9,6 +9,19 @@ import { DbzService } from '../services/dbz.service';
 
 export class MainPageComponent {
 
-  constructor(public dbzService:DbzService){
+  //se ,mejora el uso de los servicios porque los datos son privados es recomendable
+
+  constructor(private dbzService:DbzService){
+  }
+
+  get characters(): Character[]{
+    return [...this.dbzService.characters];
+  }
+  deletePersonajeId(id: string): void{
+
+    this.dbzService.eliminarPersonajeId(id);
+  }
+  nuevaPersona(character:Character): void{
+    this.dbzService.nuevoPersonaje(character);
   }
 }
