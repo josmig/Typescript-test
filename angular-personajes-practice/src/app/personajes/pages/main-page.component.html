@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Agrega nuevo personaje</h1>
+</div>
+<div class="row">
+  <div class="col">
+    <app-lista [listPersonaje]="personajes" (eliminarId)="deletePersonajeId($event)"></app-lista>
+  </div>
+  <div class="col">
+    <app-formulario (onNuevoPersonaje)="nuevaPersona($event)"></app-formulario>
+  </div>
+</div>
